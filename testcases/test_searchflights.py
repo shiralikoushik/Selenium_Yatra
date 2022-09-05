@@ -14,11 +14,11 @@ class TestSearchAndVerifyFilter(softest.TestCase):
         self.lp = LaunchPage(self.driver)
         self.ut = Utils()
 
-    # @file_data("../testdata/testdata.json")
-    # @file_data("../testdata/testyml.yaml")
+    #@file_data("../testdata/testdata.json")
+    @file_data("../testdata/testyml.yaml")
     # @data(*Utils.read_data_from_excel("C:\\python-selenium\\TestFrameworkDemo\\testdata\\tdataexcel.xlsx", "Sheet1"))
-    @data(*Utils.read_data_from_csv("C:\\python-selenium\\TestFrameworkDemo\\testdata\\tdatacsv.csv"))
-    @unpack
+    #@data(*Utils.read_data_from_csv("C:\Users\shira\Documents\Python\Test_Framework\testdata\\tdatacsv.csv"))
+    #@unpack
     def test_search_flights_1_stop(self, goingfrom, goingto, date, stops):
         search_flight_result = self.lp.searchFlights(goingfrom, goingto, date)
         self.lp.page_scroll()
